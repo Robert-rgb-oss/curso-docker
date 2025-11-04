@@ -2,13 +2,13 @@ services:
   miapp01:
     build: .
     ports:
-      -"3000:3000"
+      - "3000:3000"
     links:
-      -mongo01
-    mongo01:
-      image: mongo
-      ports:
-        -"27017:27017"
-      enviroment:
-        -MONGO_INITDB_ROOT_USERNAME:robert
-        -MONGO_INITDB_ROOT_PASSWORD:password
+      - mongo01
+  mongo01:
+    image: mongo
+    ports:
+      - "27017:27017"
+    enviroment:
+      - MONGO_INITDB_ROOT_USERNAME:robert
+      - MONGO_INITDB_ROOT_PASSWORD:password
