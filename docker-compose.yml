@@ -1,6 +1,6 @@
 services:
   miapp01:
-    build:
+    build: .
     ports:
       -"3000:3000"
     links:
@@ -10,4 +10,5 @@ services:
       ports:
         -"27017:27017"
       enviroment:
-        -
+        -MONGO_INITDB_ROOT_USERNAME:robert
+        -MONGO_INITDB_ROOT_PASSWORD:password
